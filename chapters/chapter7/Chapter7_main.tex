@@ -108,7 +108,7 @@
             \begin{Itemize}
                 \item \itr{Most Probable Speed}{最概然速率}表示粒子数最多的区间微元对应的速度，定义式为：
                 \begin{equation}
-                    v_{p} \quad where \quad \frac{\dif N({v_{p}})}{\dif{v}} = 0
+                    v_{p} \quad \text{where} \quad \frac{\dif N({v_{p}})}{\dif{v}} = 0
                     \nonumber
                 \end{equation}
                 对麦克斯韦分布，其值等于$\sqrt{\frac{2k_{B}T}{\mu}}$或$\sqrt{\frac{2RT}{M}}$，$M$为摩尔质量。
@@ -193,7 +193,7 @@
             所以说在学习这一块的时候，请各位务必注意符号问题，很有可能课程或参考书的符号及其定义与本笔记有较大出入。
 
             关于热力学函数的$\dif{Q}$这类对于过程函数的微分，最好从物理上理解为一个微小可逆过程的放热，
-            因为如果把$Q$作为一个数学概念上的多元函数，那么它并不能全微分，自然不存在$\dif{Q}$这一说法。
+            因为如果把$Q$作为一个数学概念上的多元函数，那么它并不能全微分，自然不存在$\dif{Q}$这一说法，更恰当的写法应当是$\dbar{Q}$。
             而对于状态函数的微分如$\dif{U}$，其可以视为数学上的全微分。
 
             然后是贯穿本章的一个问题，这部分选取的统计力学与热力学由于是比较原始的部分，
@@ -229,7 +229,7 @@
                 \item \itr{Heat}{热}是由系统和周围环境之间的温差导致而在系统边界上传递的能量，用$Q$表示。热是过程函数。
                 热的传递导致温度的传递，它们的关系如下：
                 \begin{equation}
-                    \frac{\dif{Q}}{\dif{t}} = \kappa_{t}A\frac{\dif{T}}{\dif{x}}
+                    \frac{\dbar{Q}}{\dif{t}} = \kappa_{t}A\frac{\dif{T}}{\dif{x}}
                 \end{equation}
                 这是\itr{Fourier's Law}{傅里叶定律}，其中$\kappa_{t}$表示介质的热传导率，与介质种类有关；$A$为截面面积；
                 $\frac{\dif{T}}{\dif{x}}$代表了温度梯度，即两端的温差大小。
@@ -271,7 +271,7 @@
             \end{law}
             热力学第一定律也可以写成微分形式：
             \begin{equation}
-                \dif{U} = \dif{Q} - p\dif{V}
+                \dif{U} = \dbar{Q} - p\dif{V}
                 \nonumber
             \end{equation}
         \subsection[过程介绍]{\itr{Process Introduction}{过程介绍}\mgnote{为方便查阅把熵的计算也写在此处}}
@@ -283,7 +283,7 @@
                     &Q = \Delta U = nC_{V}\Delta T = \frac{i}{2}V\Delta p \\
                     &W = 0 \\
                     &\Delta U = nC_{V}\Delta T = \frac{i}{2}V\Delta p \\ 
-                    &\Delta S = nC_{V}ln\frac{p_{2}}{p_{1}} =nC_{V}ln\frac{T_{2}}{T_{1}}
+                    &\Delta S = nC_{V}\ln\frac{p_{2}}{p_{1}} =nC_{V}\ln\frac{T_{2}}{T_{1}}
                 \end{aligned}
                 \nonumber
             \end{equation}
@@ -294,7 +294,7 @@
                     &Q = nC_{p}\Delta T =\frac{i+2}{2}p\Delta V\\
                     &W = p\Delta{V} \\
                     &\Delta U = Q - W = nC_{V}\Delta T = \frac{i}{2}p\Delta V \\ 
-                    &\Delta S = nC_{p}ln\frac{V_{2}}{V_{1}} =nC_{p}ln\frac{T_{2}}{T_{1}}
+                    &\Delta S = nC_{p}\ln\frac{V_{2}}{V_{1}} =nC_{p}\ln\frac{T_{2}}{T_{1}}
                 \end{aligned}
                 \nonumber
             \end{equation}
@@ -302,10 +302,10 @@
             \begin{equation}
                 \begin{aligned}
                     &pV = constant \\
-                    &Q = W = nRTln\frac{P_1}{P_2} = nRTln\frac{V_2}{V_1}\\
-                    &W = nRTln\frac{P_1}{P_2} = nRTln\frac{V_2}{V_1} \\
+                    &Q = W = nRT\ln\frac{P_1}{P_2} = nRT\ln\frac{V_2}{V_1}\\
+                    &W = nRT\ln\frac{P_1}{P_2} = nRT\ln\frac{V_2}{V_1} \\
                     &\Delta U = 0 \\ 
-                    &\Delta S = nRln\frac{V_{2}}{V_{1}} =nRln\frac{P_{1}}{P_{2}}
+                    &\Delta S = nR\ln\frac{V_{2}}{V_{1}} =nR\ln\frac{P_{1}}{P_{2}}
                 \end{aligned}
                 \nonumber
             \end{equation}
@@ -379,20 +379,20 @@
             \end{equation}
             或写作微分形式，即取近平衡态间转变的过程视为可逆过程：
             \begin{equation}
-                \dif{S} = \frac{\dif{Q}}{T} 
+                \dif{S} = \frac{\dbar{Q}}{T} 
                 \nonumber
             \end{equation}
             
             熵是一个状态函数，熵的物理意义可以从下面这个公式中体现：
             \begin{equation}
-                S = k_{_B}ln\Omega
+                S = k_{_B}\ln\Omega
                 \nonumber
             \end{equation}
             其中$\Omega$表示所有可能的微观状态数量，也就是说，熵是系统可能的微观状态数量的度量，或者其他教材提到的“混乱度”。
             这个公式是连接微观与宏观间最重要的桥梁，也是统计力学的核心。
 
             考虑一个\itr{Free Expansion}{自由膨胀}过程，也就是说等温条件下气体向真空中膨胀。由于真空，气体自然无法做功，$W=0$；
-            由于等温，$\Delta U=0$；那么由热力学第一定律，自然有$Q=0$。但是计算它的熵变，这个值为$\Delta S = nRln\frac{V_2}{V_1}>0$。
+            由于等温，$\Delta U=0$；那么由热力学第一定律，自然有$Q=0$。但是计算它的熵变，这个值为$\Delta S = nR\ln\frac{V_2}{V_1}>0$。
             众所周知，这个过程是不可逆的，也就是说那个$\Delta S<0$的逆过程是无法发生的，
             这正是\itr{Second Law of Thermodynamics}{热力学第二定律}表明的。
             \begin{law}[Second Law of Thermodynamics]
@@ -414,7 +414,7 @@
 
                 或表述为：第二类永动机不能实现。
             \end{law}
-            熵给出了热的本质$\dif{Q} = T\dif{S}$，于是就有了下面的热力学基本公式：
+            熵给出了热的本质$\dbar{Q} = T\dif{S}$，于是就有了下面的热力学基本公式：
             \begin{equation}
                 \dif{U} = T\dif{S}-p\dif{V}
                 \nonumber
@@ -438,7 +438,7 @@
         根据我们的经验，信息量与事件发生概率成负相关，必然发生的事件比如\dove 的生日不在2月30日，就相当于什么都没说；
         信息量$Q$之间服从加法原则，事件概率$P$则服从乘法原则，故两者应为负对数关系：
         \begin{equation}
-            Q = - logP
+            Q = - \log P
             \nonumber
         \end{equation}
         至于对数的底其实是任意的，彼此相差一个系数而已，通常选择的是$2$。
@@ -446,7 +446,7 @@
         至此我们引出\itr{Information Entropy$\backslash$ Shannon Entropy}{信息熵$\backslash$ 香农熵}的概念，
         它是事件发生前可能产生的信息量的数学期望，即：
         \begin{equation}
-            S = E(Q) = \sum Q_{i}P_{i} = -\sum P_{i}logP_{i}
+            S = E(Q) = \sum Q_{i}P_{i} = -\sum P_{i}\log P_{i}
             \nonumber
         \end{equation}
         信息熵是信息的度量。
@@ -454,13 +454,13 @@
         然后再来了解一下\itr{Cross Entropy}{交叉熵}，对于某事件，假设其有两种概率分布为$p(x)$与$q(x)$，
         则其交叉熵为：
         \begin{equation}
-            H(p,q) = - \sum p({x_{i}})log(q({x_{i}}))
+            H(p,q) = - \sum p({x_{i}})\log(q({x_{i}}))
             \nonumber
         \end{equation}
 
         两个分布的差距为其中一个事件的概率分布与信息熵之差乘积的数学期望，即：
         \begin{equation}
-            D_{KL}(p||q) = - \sum p({x_{i}})log(\frac{q({x_{i}})}{p({x_{i}})}) = H(p,p)-H(p,q)
+            D_{KL}(p||q) = - \sum p({x_{i}})\log\left(\frac{q({x_{i}})}{p({x_{i}})}\right) = H(p,p)-H(p,q)
             \nonumber
         \end{equation} 
 
